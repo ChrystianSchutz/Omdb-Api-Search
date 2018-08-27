@@ -36,10 +36,10 @@ class MovieDetail extends React.Component {
         <div className="detailsContainer">
           <div className="movieDetails">
             <p>{this.props.movieData.Title}</p>
-            {this.props.movieData.Poster == 'N/A' ? (
-              <img src={moviePlaceholder} />
+            {this.props.movieData.Poster === 'N/A' ? (
+              <img alt="placeholder" src={moviePlaceholder} />
             ) : (
-              <img src={this.props.movieData.Poster} />
+              <img alt="movie poster" src={this.props.movieData.Poster} />
             )}
             <p>Actors: {this.props.movieData.Actors}</p>
             <p>Released: {this.props.movieData.Released}</p>

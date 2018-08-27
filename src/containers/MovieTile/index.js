@@ -7,10 +7,10 @@ const MovieTile = ({ movieJson }) => (
     <Link to={`/movie/${movieJson.imdbID}`}>
       <p className="title">{movieJson.Title}</p>
     </Link>
-    {movieJson.Poster == 'N/A' ? (
-      <img src={moviePlaceholder} />
+    {movieJson.Poster === 'N/A' ? (
+      <img  alt="placeholder" src={moviePlaceholder} />
     ) : (
-      <img src={movieJson.Poster} />
+      <img alt="movie poster" src={movieJson.Poster} />
     )}
 
     <p className="year">Year: {movieJson.Year}</p>
